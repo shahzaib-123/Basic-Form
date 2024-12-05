@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #3a8dde, #8ed1f9);
+  color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-titles {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-titles h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-titles p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+#survey-form {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+#survey-form:hover {
+  transform: scale(1.02);
+}
+
+label {
+  font-size: 1rem;
+  margin-top: 3px;
+  margin-bottom: 2px;
+  display: block;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 2px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+#dropdown {
+  cursor: pointer;
+}
+
+.user-radio label,
+.user-checkbox label {
+  font-size: 1rem;
+  color: #555;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.user-radio label,
+.user-checkbox label {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.user-text textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+#submit {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #28a745, #5bc85b);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+#submit:hover {
+  background: linear-gradient(135deg, #218838, #4caf50);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  #survey-form {
+    padding: 20px;
+  }
+
+  .form-titles h1 {
+    font-size: 2rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 0.9rem;
+  }
+
+  #submit {
+    font-size: 1rem;
+  }
+}

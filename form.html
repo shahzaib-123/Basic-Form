@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <section class="form-titles">
+    <h1 id="title">We Value Your Feedback</h1>
+    <p id="description">Please take a moment to fill out our survey to help us improve your experience.</p>
+  </section>
+  <section class="user-inputs">
+    <form id="survey-form">
+      <div class="user-info">
+        <label id="name-label" for="name">Full Name</label>
+        <input required type="text" id="name" name="name" placeholder="Shahzaib Asghar">
+        <span class="error-message" id="name-error"></span>
+        
+        <label id="email-label" for="email">Email Address</label>
+        <input required type="email" id="email" name="email" placeholder="example@domain.com">
+        <span class="error-message" id="email-error"></span>
+        
+        <label id="number-label" for="number">Age (10-99)</label>
+        <input required type="number" id="number" name="age" min="10" max="99" placeholder="Your Age">
+        <span class="error-message" id="age-error"></span>
+      </div>
+
+      <div class="user-options">
+        <label for="dropdown">How satisfied are you with our services?</label>
+        <select id="dropdown" name="satisfaction">
+          <option value="very-satisfied">Very Satisfied</option>
+          <option value="satisfied">Satisfied</option>
+          <option value="neutral">Neutral</option>
+          <option value="dissatisfied">Dissatisfied</option>
+          <option value="very-dissatisfied">Very Dissatisfied</option>
+        </select>
+      </div>
+
+      <div class="user-radio">
+        <label>Would you recommend us to others?</label>
+        <label><input type="radio" name="recommend" value="yes" required> Yes</label>
+        <label><input type="radio" name="recommend" value="no"> No</label>
+      </div>
+
+      <div class="user-checkbox">
+        <label>What do you like about us? (Select all that apply)</label>
+        <label><input type="checkbox" name="features" value="quality"> Quality</label>
+        <label><input type="checkbox" name="features" value="price"> Affordable Price</label>
+        <label><input type="checkbox" name="features" value="support"> Customer Support</label>
+        <label><input type="checkbox" name="features" value="ease-of-use"> Ease of Use</label>
+      </div>
+
+      <div class="user-text">
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments" placeholder="Share your thoughts here..."></textarea>
+      </div>
+
+      <button type="submit" id="submit">Submit</button>
+      <p id="form-status" class="form-status"></p>
+    </form>
+  </section>
+</body>
+</html>
